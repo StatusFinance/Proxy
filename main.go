@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/sha256"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -31,6 +33,12 @@ func main() {
 	if apiBaseURL == "" {
 		apiBaseURL = "https://api.status.finance"
 	}
+
+	// Set up the HTTP handler that identifies the api key
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		identifier := sha256.Sum256([]byte(apiKey))
+		io.WriteString(w, fmt.Sprintf(`{"message": "Proxy for Status API", "identifier": "%x"}`, identifier))
+	})
 
 	// Set up the HTTP handler that proxies requests to the API
 	http.HandleFunc("/transactions", func(w http.ResponseWriter, r *http.Request) {

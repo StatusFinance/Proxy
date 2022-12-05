@@ -1,0 +1,19 @@
+{
+    "name": "Status Proxy",
+    "description": "Proxy for Status API",
+    "repository": "https://github.com/StatusFinance/Proxy",
+    "env": {
+        "PORT": {
+            "description": "Port to listen on",
+            "value": "8080"
+        },
+        "API_BASE_URL": {
+            "description": "Base URL for Status API",
+            "value": "https://api.status.finance"
+        },
+        "API_KEY": {
+            "description": "API key",
+            "value": ""
+        }
+    }
+}

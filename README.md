@@ -14,6 +14,18 @@ The following environment variables must be set in order for the program to func
 - `API_BASE_URL`: The base URL of the API. If not set, the default value is `https://api.status.finance`.
 - `API_KEY`: The API key that will be used in the `x-api-key` header of the requests. This key is required for authentication with the API.
 
+## Deploying to Heroku
+
+```
+heroku create
+git push heroku main
+heroku open
+```
+
+Alternatively, you can deploy your own copy of the app using this button:
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/StatusFinance/Proxy/tree/main)
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.

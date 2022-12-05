@@ -14,12 +14,6 @@ The following environment variables must be set in order for the program to func
 - `API_BASE_URL`: The base URL of the API. If not set, the default value is `https://api.status.finance`.
 - `API_KEY`: The API key that will be used in the `x-api-key` header of the requests. This key is required for authentication with the API.
 
-## Dependencies
-
-Proxy has the following dependency:
-
-- [`github.com/joho/godotenv`](https://github.com/joho/godotenv): A package for loading environment variables from a `.env` file. This dependency is used to easily manage the environment variables required by the program.
-
 ## License
 
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.

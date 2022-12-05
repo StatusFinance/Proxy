@@ -10,9 +10,11 @@ import (
 )
 
 func main() {
-	// Load environment variables from the .env file
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file: ", err)
+	// Load environment variables from the .env filet
+	if _, err := os.Stat(".env"); err == nil {
+		if err := godotenv.Load(); err != nil {
+			log.Fatal("Error loading .env file: ", err)
+		}
 	}
 
 	// Get the value of the PORT environment variable, or set a default value of "3000"

@@ -16,7 +16,8 @@ The following environment variables must be set in order for the program to func
 
 ## Deploying
 
-Deploy your own instance of Proxy in seconds by clicking the button below:
+Deploy your own instance of Proxy in seconds:
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/StatusFinance/Proxy/tree/main)
 
 ## License
